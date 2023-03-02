@@ -1,4 +1,7 @@
-# WindowsOS-Security-Checklist 
+# WindowsOS-Security-Checklist - Lab Exercise
+
+The purpose of this exercise is to develop a framework, baseline, and applying it to secure your windows operating systems. This checklist will exercise your ability to review different aspects of system configurations, processes, and network connectivity to protect your assests and data. 
+
 
 1. Keep the operating system up to date with the latest security patches and updates.
 
