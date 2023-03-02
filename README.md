@@ -76,11 +76,11 @@ The purpose of this exercise is to develop a framework, baseline, and applying i
 
 12. <b>Configure User Account Control (UAC) to the highest level.</b>
     - User Account Control (UAC) is a security feature in Windows that helps prevent unauthorized changes to your computer. By configuring UAC to the highest level, you can ensure that only authorized users can make changes to your computer. Here are the steps to configure UAC to the highest level on Windows:
-    - Open the Control Panel: Click the Start button and select Control Panel.
-    - Open User Accounts: Click on "User Accounts and Family Safety" and then click on "User Accounts".
-    - Change UAC settings: Click on "Change User Account Control settings" and move the slider to the highest level, which is "Always notify".
-    - Click OK: Click on "OK" to save the changes.
-    - Restart your computer: Restart your computer for the changes to take effect.
+        - Open the Control Panel: Click the Start button and select Control Panel.
+        - Open User Accounts: Click on "User Accounts and Family Safety" and then click on "User Accounts".
+        - Change UAC settings: Click on "Change User Account Control settings" and move the slider to the highest level, which is "Always notify".
+        - Click OK: Click on "OK" to save the changes.
+        - Restart your computer: Restart your computer for the changes to take effect.
 
 13. <b>Disable unused user accounts and rename the default Administrator account.</b>
     - Open the Computer Management tool: Press the Windows key + X and select "Computer Management" from the menu.
@@ -103,7 +103,7 @@ The purpose of this exercise is to develop a framework, baseline, and applying i
     - Configure privileged accounts for two-factor authentication: Once the authentication solution is installed and configured, you can configure your privileged accounts to require two-factor authentication. This can be done through Active Directory or through the authentication solution itself, depending on the solution you choose.
     - Test and monitor the authentication solution: Once the solution is configured, test it to ensure that it is working correctly. Monitor the solution to detect any issues or anomalies that may arise.
 
-16. Disable unnecessary startup programs and services.
+16. <b>Disable unnecessary startup programs and services.</b>
     - Open the Task Manager: You can do this by right-clicking on the taskbar and selecting "Task Manager" from the menu.
     - Go to the "Startup" tab: In the Task Manager, click on the "Startup" tab to see a list of all the programs that start automatically when your computer boots up.
     - Disable unnecessary startup programs: Review the list of startup programs and disable any that are unnecessary or that you don't recognize. To do this, select the program and click on the "Disable" button.
@@ -112,7 +112,18 @@ The purpose of this exercise is to develop a framework, baseline, and applying i
     - Disable unnecessary services: To disable a service, right-click on it and select "Properties." Change the "Startup type" to "Disabled" and click on "Apply" and "OK."
     - Note: be careful not to disable any programs or services that are necessary for your computer to function properly. If you are unsure about a program or service, it's best to do some research before disabling it.
 
-17. Enable DEP (Data Execution Prevention) to protect against memory-based attacks.
+17. <b>Enable DEP (Data Execution Prevention) to protect against memory-based attacks.</b>
+    - DEP (Data Execution Prevention) is a security feature in Windows that helps protect against memory-based attacks such as buffer overflows. Enabling DEP on your Windows computer can help improve security. Here are the steps to enable DEP:
+        - Open the Control Panel: You can do this by clicking on the "Start" button and selecting "Control Panel" from the menu.
+        - Go to System Properties: In the Control Panel, click on "System and Security" and then select "System." Alternatively, you can right-click on "Computer" and select "Properties."
+        - Click on "Advanced system settings": In the System window, click on "Advanced system settings" on the left-hand side.
+        - Go to the "Advanced" tab: In the System Properties window, click on the "Advanced" tab.
+        - Click on "Settings" under "Performance": Under the "Performance" section, click on the "Settings" button.
+        - Go to the "Data Execution Prevention" tab: In the Performance Options window, go to the "Data Execution Prevention" tab.
+        - Enable DEP for essential Windows programs and services: Select the "Turn on DEP for essential Windows programs and services only" option.
+        - Enable DEP for all programs and services: Alternatively, you can select the "Turn on DEP for all programs and services except those I select" option and add any programs that you want to exclude from DEP.
+        - Click "Apply" and "OK": Click on the "Apply" button and then click on "OK" to save the changes.
+        - Enabling DEP on your Windows computer can help improve security by protecting against memory-based attacks. However, some older programs may not be compatible with DEP, so you may need to adjust the settings or find an alternative solution if you experience any issues.
 
 18. Enable SEHOP (Structured Exception Handler Overwrite Protection) to protect against SEH-based attacks.
 
