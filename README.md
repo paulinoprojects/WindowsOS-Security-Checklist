@@ -125,8 +125,17 @@ The purpose of this exercise is to develop a framework, baseline, and applying i
         - Click "Apply" and "OK": Click on the "Apply" button and then click on "OK" to save the changes.
         - Enabling DEP on your Windows computer can help improve security by protecting against memory-based attacks. However, some older programs may not be compatible with DEP, so you may need to adjust the settings or find an alternative solution if you experience any issues.
 
-18. Enable SEHOP (Structured Exception Handler Overwrite Protection) to protect against SEH-based attacks.
+18. <b>Enable SEHOP (Structured Exception Handler Overwrite Protection) to protect against SEH-based attacks.</b>
+    - SEHOP (Structured Exception Handler Overwrite Protection) is a security feature in Windows that helps to protect against Structured Exception Handler (SEH) overwrite attacks. To enable SEHOP on Windows, follow these steps:
+        - Open the Start menu and search for "regedit" to open the Registry Editor.
+        - Navigate to the following registry key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel
+        - Right-click on an empty space in the right-hand pane and select "New" -> "DWORD Value".
+        - Name the new DWORD value "DisableExceptionChainValidation".
+        - Double-click on the new value and set its data to "0".
+        - Close the Registry Editor and restart your computer.
+        - After restarting your computer, SEHOP will be enabled and help to protect against SEH-based attacks. It is important to note that some software may be incompatible with SEHOP, so it is recommended to test the feature before enabling it in a production environment.
 
-19. Configure Event Log settings to retain logs for a sufficient period and protect logs from unauthorized access.
+19. <b>Configure Event Log settings to retain logs for a sufficient period and protect logs from unauthorized access.</b>
+    -
 
 By following this checklist, a Windows operating system can be hardened to reduce the risk of security incidents and protect sensitive data from unauthorized access. It's important to note that this is not an exhaustive list and that additional steps may be required based on the specific environment and security requirements.
