@@ -16,7 +16,11 @@ The purpose of this exercise is to develop a framework, baseline, and applying i
     - Disable unnecessary protocols: Open the Windows Network and Sharing Center by typing "ncpa.cpl" into the Start menu search bar and selecting "Network and Sharing Center" from the results. Click on your network connection and select "Properties". Uncheck any protocols that you don't need, such as "Client for Microsoft Networks" or "File and Printer Sharing for Microsoft Networks".
     - Reboot your computer: After making changes to services and protocols, it's a good idea to reboot your computer to ensure that the changes take effect.
 
-3. Configure a firewall to restrict incoming and outgoing traffic.
+3. <b>Configure a firewall to restrict incoming and outgoing traffic.</b>
+    - Open the Windows Defender Firewall: Type "Windows Defender Firewall" into the Start menu search bar and select "Windows Defender Firewall with Advanced Security" from the results.
+    - Create a new inbound rule: In the left-hand pane, click "Inbound Rules" and then click "New Rule" in the right-hand pane. Select the "Custom" option and click "Next". Choose the type of traffic to be restricted (e.g., TCP or UDP), and then specify the ports or range of ports to be restricted. Select "Block the connection" as the action to take when the rule applies, and click "Next".
+    - Create a new outbound rule: In the left-hand pane, click "Outbound Rules" and then click "New Rule" in the right-hand pane. Follow the same steps as for the inbound rule to create a new outbound rule.
+    - Apply the rules: Once you have created the inbound and outbound rules, apply them by clicking "Finish". The new rules will take effect immediately.
 
 4. Use strong passwords and implement password policies.
 
