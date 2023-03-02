@@ -74,7 +74,7 @@ The purpose of this exercise is to develop a framework, baseline, and applying i
     - Close the Registry Editor: Close the Registry Editor and restart your computer.
     - Note: Keep in mind that this will prevent the automatic execution of software and files on USB devices, so you will need to manually open files and programs on the device. If you need to use Autorun or Autoplay for a specific purpose, you can enable it again using the same steps above and setting the "Value data" to "0x91".
 
-<b>12. Configure User Account Control (UAC) to the highest level.</b>
+12. <b>Configure User Account Control (UAC) to the highest level.</b>
     - User Account Control (UAC) is a security feature in Windows that helps prevent unauthorized changes to your computer. By configuring UAC to the highest level, you can ensure that only authorized users can make changes to your computer. Here are the steps to configure UAC to the highest level on Windows:
     - Open the Control Panel: Click the Start button and select Control Panel.
     - Open User Accounts: Click on "User Accounts and Family Safety" and then click on "User Accounts".
