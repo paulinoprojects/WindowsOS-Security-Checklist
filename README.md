@@ -1,6 +1,6 @@
 # WindowsOS-Security-Checklist - Lab Exercise
 
-The purpose of this exercise is to develop a framework, baseline, and applying it to secure your windows operating systems. This checklist will exercise your ability to review different aspects of system configurations, processes, and network connectivity to protect your assests and data. 
+The purpose of this exercise is to analyze and defend your windows operating systems. This checklist will exercise your ability to review different aspects of system configurations, processes, and network connectivity to protect your assests and data. 
 
 
 1. <b>Keep the operating system up to date with the latest security patches and updates.</b>
@@ -136,6 +136,13 @@ The purpose of this exercise is to develop a framework, baseline, and applying i
         - After restarting your computer, SEHOP will be enabled and help to protect against SEH-based attacks. It is important to note that some software may be incompatible with SEHOP, so it is recommended to test the feature before enabling it in a production environment.
 
 19. <b>Configure Event Log settings to retain logs for a sufficient period and protect logs from unauthorized access.</b>
-    -
+    - Open the Event Viewer by searching for "event viewer" in the Start menu.
+    - Click on "Windows Logs" in the left-hand pane and select the log that you want to configure (e.g., Security, Application, etc.).
+    - Right-click on the log and select "Properties".
+    - In the "Log Properties" window, click on the "General" tab.
+    - Under "Log Size", select "Overwrite events as needed" or "Archive the log when full, do not overwrite events".
+    - Under "Retention Method", select "Overwrite events older than [X] days" or "Archive the log when full, do not overwrite events".
+    - Click on the "Security" tab and configure the appropriate access permissions for the log.
+    - Click "OK" to save your changes.
 
 By following this checklist, a Windows operating system can be hardened to reduce the risk of security incidents and protect sensitive data from unauthorized access. It's important to note that this is not an exhaustive list and that additional steps may be required based on the specific environment and security requirements.
