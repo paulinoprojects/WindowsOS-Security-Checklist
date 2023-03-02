@@ -1,4 +1,4 @@
-# WindowsOS-Security-Checklist
+# WindowsOS-Security-Checklist 
 
 1. Keep the operating system up to date with the latest security patches and updates.
 
