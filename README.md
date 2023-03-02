@@ -82,26 +82,40 @@ The purpose of this exercise is to develop a framework, baseline, and applying i
     - Click OK: Click on "OK" to save the changes.
     - Restart your computer: Restart your computer for the changes to take effect.
 
-15. Disable unnecessary system services such as Bluetooth, Print Spooler, and Remote Registry.
+13. <b>Disable unused user accounts and rename the default Administrator account.</b>
+    - Open the Computer Management tool: Press the Windows key + X and select "Computer Management" from the menu.
+    - Navigate to the User Accounts section: Click on "Local Users and Groups" in the left-hand menu and then click on "Users".
+    - Disable unused user accounts: Right-click on any user accounts that are no longer needed and select "Properties". Check the box next to "Account is disabled" and click "OK" to disable the account.
+    - Rename the default Administrator account: Right-click on the default Administrator account and select "Rename". Choose a new name for the account and click "OK".
+    - Set a strong password for the Administrator account: Right-click on the renamed Administrator account and select "Set Password". Choose a strong password for the account and click "OK".
+    - Log out of the Administrator account: Log out of the Administrator account and log in using a standard user account.
 
-16. Set strong password policies, including password complexity and regular password changes.
+14. <b>Configure Group Policy settings to restrict access to sensitive areas such as the registry, file system, and system settings.</b>
+    - Open the Group Policy Editor: Press the Windows key + R, type "gpedit.msc" and press Enter.
+    - Navigate to the security settings: Expand "Local Computer Policy" and navigate to "Computer Configuration" > "Windows Settings" > "Security Settings".
+    - Configure the security settings: Right-click on "Registry", "File System", or "System" and select "Add User or Group". Add the user or group you want to restrict access for and click "OK".
+    - Configure the permissions: Right-click on the user or group you just added and select "Properties". Choose the level of access you want to allow for each user or group.
+    - Save your changes: Click "OK" to save your changes.
 
-17. Disable unused network protocols such as NetBIOS and SMBv1.
+15. <b>Implement two-factor authentication for privileged accounts.</b>
+    - Choose a two-factor authentication solution: There are many third-party solutions available, such as Duo Security, RSA SecurID, and Microsoft Authenticator. Choose a solution that meets your organization's needs and requirements.
+    - Install and configure the authentication solution: Follow the instructions provided by the vendor to install and configure the two-factor authentication solution on your Windows servers.
+    - Configure privileged accounts for two-factor authentication: Once the authentication solution is installed and configured, you can configure your privileged accounts to require two-factor authentication. This can be done through Active Directory or through the authentication solution itself, depending on the solution you choose.
+    - Test and monitor the authentication solution: Once the solution is configured, test it to ensure that it is working correctly. Monitor the solution to detect any issues or anomalies that may arise.
 
-18. Disable unused user accounts and rename the default Administrator account.
+16. Disable unnecessary startup programs and services.
+    - Open the Task Manager: You can do this by right-clicking on the taskbar and selecting "Task Manager" from the menu.
+    - Go to the "Startup" tab: In the Task Manager, click on the "Startup" tab to see a list of all the programs that start automatically when your computer boots up.
+    - Disable unnecessary startup programs: Review the list of startup programs and disable any that are unnecessary or that you don't recognize. To do this, select the program and click on the "Disable" button.
+    - Open the Services app: Press the Windows key + R on your keyboard to open the Run dialog box, then type "services.msc" and press Enter.
+    - Review the list of services: In the Services app, review the list of services that are running on your computer. Identify any services that are unnecessary or that you don't recognize.
+    - Disable unnecessary services: To disable a service, right-click on it and select "Properties." Change the "Startup type" to "Disabled" and click on "Apply" and "OK."
+    - Note: be careful not to disable any programs or services that are necessary for your computer to function properly. If you are unsure about a program or service, it's best to do some research before disabling it.
 
-19. Configure Group Policy settings to restrict access to sensitive areas such as the registry, file system, and system settings.
+17. Enable DEP (Data Execution Prevention) to protect against memory-based attacks.
 
-20. Configure Windows Firewall to block incoming and outgoing traffic except for authorized applications and services.
+18. Enable SEHOP (Structured Exception Handler Overwrite Protection) to protect against SEH-based attacks.
 
-21. Implement two-factor authentication for privileged accounts.
-
-22. Disable unnecessary startup programs and services.
-
-23. Enable DEP (Data Execution Prevention) to protect against memory-based attacks.
-
-24. Enable SEHOP (Structured Exception Handler Overwrite Protection) to protect against SEH-based attacks.
-
-25. Configure Event Log settings to retain logs for a sufficient period and protect logs from unauthorized access.
+19. Configure Event Log settings to retain logs for a sufficient period and protect logs from unauthorized access.
 
 By following this checklist, a Windows operating system can be hardened to reduce the risk of security incidents and protect sensitive data from unauthorized access. It's important to note that this is not an exhaustive list and that additional steps may be required based on the specific environment and security requirements.
