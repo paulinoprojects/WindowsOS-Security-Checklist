@@ -22,9 +22,16 @@ The purpose of this exercise is to develop a framework, baseline, and applying i
     - Create a new outbound rule: In the left-hand pane, click "Outbound Rules" and then click "New Rule" in the right-hand pane. Follow the same steps as for the inbound rule to create a new outbound rule.
     - Apply the rules: Once you have created the inbound and outbound rules, apply them by clicking "Finish". The new rules will take effect immediately.
 
-4. Use strong passwords and implement password policies.
+4. <b>Use strong passwords and implement password policies.</b>
+    - Open the Group Policy Editor: Type "gpedit.msc" into the Start menu search bar and select "Edit group policy" from the results.
+    - Navigate to the Password Policy settings: In the left-hand pane, navigate to "Computer Configuration" > "Windows Settings" > "Security Settings" > "Account Policies" > "Password Policy".
+    - Configure the password policy settings: In the right-hand pane, you can configure various password policy settings, such as the minimum password length, complexity requirements, and password expiration policies. Set these policies according to your organization's security requirements.
+    - Apply the password policy settings: Once you have configured the password policy settings, close the Group Policy Editor and restart your computer for the changes to take effect.
 
-5. Limit user privileges.
+5. <b>Limit user privileges.</b>
+    - Create a standard user account: By default, Windows creates a user account with administrative privileges. However, you can create a standard user account for everyday use. To do this, go to "Settings" > "Accounts" > "Family & other people", and click "Add someone else to this PC". Then, choose "I don't have this person's sign-in information" and follow the prompts to create a new standard user account.
+    - Remove administrative privileges: Once you have created a standard user account, you can remove administrative privileges from other user accounts. To do this, go to "Settings" > "Accounts" > "Family & other people", and select the user account you want to modify. Then, click "Change account type" and select "Standard user".
+    - Use the UAC feature: The User Account Control (UAC) feature in Windows can help to prevent unauthorized changes by requiring administrative approval for certain actions. To enable UAC, go to "Settings" > "Update & Security" > "Windows Security" > "Virus & threat protection" > "Manage settings", and turn on "Tamper Protection". Then, go to "Settings" > "Accounts" > "Sign-in options" and turn on "User Account Control".
 
 6. Configure antivirus and anti-malware software.
 
