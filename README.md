@@ -4,6 +4,10 @@ The purpose of this exercise is to develop a framework, baseline, and applying i
 
 
 1. Keep the operating system up to date with the latest security patches and updates.
+    - Open Powershell and run the following scripts: 
+      - Get-ComputerInfo | Select-Object WindowsProductName, WindowsInstallationType, WindowsVersion
+      - Alternative: Get-WmiObject -Class Win32_OperatingSystem | Select-Object Caption, Version
+    - This allows you to retreive your devices' current OS version
 
 2. Disable unnecessary services and protocols.
 
