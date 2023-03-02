@@ -45,17 +45,34 @@ The purpose of this exercise is to develop a framework, baseline, and applying i
     - Create a strong password: To encrypt the data, you'll need to create a strong password that will be required to access the data. Use a combination of uppercase and lowercase letters, numbers, and symbols, and avoid using easily guessable information like birthdates or names.
     - Backup your recovery key: In case you forget your password, Windows will provide a recovery key that you can use to unlock the encrypted data. Make sure to backup this key to a safe location, such as a USB drive or a cloud storage service.
 
-8. Enable auditing and logging.
+8. <b>Enable auditing and logging.</b>
+    - Open the Local Security Policy: Go to "Control Panel" > "Administrative Tools" > "Local Security Policy".
+    - Enable auditing policies: In the Local Security Policy window, go to "Local Policies" > "Audit Policy". Here you can configure the auditing policies for various events, such as account logon events, object access, and policy changes. Select the events you want to audit and click "OK".
+    - Configure logging options: To configure logging options, go to "Control Panel" > "Administrative Tools" > "Event Viewer". Here you can view the logs for various system events, such as application events, security events, and system events. To configure the logging options, right-click on the log you want to configure and select "Properties". Here you can specify the maximum log size, overwrite options, and event filter options.
+    - Monitor and review the logs: Once auditing and logging are enabled, you can monitor and review the logs on a regular basis to identify any security-related incidents or user activity. Use the Event Viewer to view the logs and filter them by event type, date, and source.
 
-9. Disable unnecessary remote access.
+9. <b>Disable unnecessary remote access.</b>
+    - Disable Remote Desktop: Remote Desktop is a built-in feature in Windows that allows users to access your computer remotely. If you don't need this feature, you can disable it to prevent unauthorized access. To disable Remote Desktop, go to "Control Panel" > "System" > "Remote settings", and uncheck the box next to "Allow Remote Assistance connections to this computer".
+    - Disable Remote Assistance: Remote Assistance is another feature that allows someone else to remotely control your computer. To disable this feature, go to "Control Panel" > "System" > "Remote settings", and uncheck the box next to "Allow Remote Assistance connections to this computer".
+    - Disable Remote Registry: Remote Registry is a feature that allows remote users to access and modify the Windows Registry on your computer. To disable this feature, go to "Control Panel" > "Administrative Tools" > "Services", and locate the "Remote Registry" service. Right-click on it and select "Properties", and set the "Startup type" to "Disabled".
+    - Disable other remote access tools: If you have other third-party remote access tools installed on your system, such as TeamViewer or LogMeIn, make sure to disable them if you don't need them.
 
-10. Regularly perform backups.
+10. <b>Regularly perform backups.</b>
+    - Choose a backup method: Windows provides several built-in backup methods, such as File History, Backup and Restore, and System Image Backup. Choose the backup method that best fits your needs based on the type of data you want to backup and the level of protection you need.
+    - Set up the backup schedule: Once you have chosen a backup method, set up a backup schedule to ensure that your data is backed up regularly. You can choose to backup your data daily, weekly, or monthly, depending on your needs.
+    - Select the backup location: Choose a backup location that is safe and secure, such as an external hard drive, a network location, or a cloud storage service. Make sure to choose a location that is separate from your main system drive to protect your data in case of a system failure.
+    - Start the backup: Once you have set up the backup schedule and selected the backup location, start the backup process. Depending on the backup method you are using, this may involve selecting the files or folders you want to backup, choosing the backup location, and configuring any additional backup settings.
+    - Monitor the backup process: Once the backup process is started, monitor the backup progress to ensure that it is completed successfully. Check the backup logs and notifications to identify any errors or issues that may require attention.
 
-11. Enable BitLocker or other encryption software to encrypt the system drive.
-
-12. Enable Windows Defender or another antivirus software and keep it updated.
-
-13. Disable Autorun and Autoplay features to prevent malware infections from USB devices.
+11. <b>Disable Autorun and Autoplay features to prevent malware infections from USB devices.</b>
+    - Open the Control Panel: Click the Start button and select Control Panel.
+    - Open AutoPlay: Click on "Hardware and Sound" and then click on "AutoPlay".
+    - Disable AutoPlay: In the AutoPlay settings window, uncheck the box next to "Use AutoPlay for all media and devices".
+    - Disable Autorun: Open the Registry Editor by pressing the Windows key + R, typing "regedit" and pressing Enter. Navigate to the following key in the Registry Editor: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer
+    - Create a new DWORD value: Right-click in the right-hand pane and select "New" > "DWORD Value". Name the new value "NoDriveTypeAutoRun".
+    - Set the value data: Double-click on the new value you just created and set the "Value data" to "0xFF" (without the quotes).
+    - Close the Registry Editor: Close the Registry Editor and restart your computer.
+    - Note: Keep in mind that this will prevent the automatic execution of software and files on USB devices, so you will need to manually open files and programs on the device. If you need to use Autorun or Autoplay for a specific purpose, you can enable it again using the same steps above and setting the "Value data" to "0x91".
 
 14. Configure User Account Control (UAC) to the highest level.
 
