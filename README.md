@@ -9,7 +9,12 @@ The purpose of this exercise is to develop a framework, baseline, and applying i
       - Alternative: Get-WmiObject -Class Win32_OperatingSystem | Select-Object Caption, Version
     - This allows you to retreive your devices' current OS version
 
-2. Disable unnecessary services and protocols.
+2. <b>Disable unnecessary services and protocols.</b>
+    - Open the Windows Services app: Type "services.msc" into the Start menu search bar and select "Services" from the results.
+    - Identify unnecessary services: Scroll through the list of services and identify those that you don't need. You can find information about each service by right-clicking it and selecting "Properties".
+    - Disable unnecessary services: To disable a service, right-click it and select "Properties". Change the "Startup type" to "Disabled" and click "OK". Note that some services may be required by other software, so be careful not to disable any services that are critical for your system.
+    - Disable unnecessary protocols: Open the Windows Network and Sharing Center by typing "ncpa.cpl" into the Start menu search bar and selecting "Network and Sharing Center" from the results. Click on your network connection and select "Properties". Uncheck any protocols that you don't need, such as "Client for Microsoft Networks" or "File and Printer Sharing for Microsoft Networks".
+    - Reboot your computer: After making changes to services and protocols, it's a good idea to reboot your computer to ensure that the changes take effect.
 
 3. Configure a firewall to restrict incoming and outgoing traffic.
 
