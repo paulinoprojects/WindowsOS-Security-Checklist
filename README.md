@@ -7,7 +7,7 @@ The purpose of this exercise is to develop a framework, baseline, and applying i
     - Open Powershell and run the following scripts: 
       - Get-ComputerInfo | Select-Object WindowsProductName, WindowsInstallationType, WindowsVersion
       - Alternative: Get-WmiObject -Class Win32_OperatingSystem | Select-Object Caption, Version
-    - This allows you to retreive your devices' current OS version
+    - This allows you to retreive your devices' current OS version and determine if an update is needed.
 
 2. <b>Disable unnecessary services and protocols.</b>
     - Open the Windows Services app: Type "services.msc" into the Start menu search bar and select "Services" from the results.
@@ -33,9 +33,17 @@ The purpose of this exercise is to develop a framework, baseline, and applying i
     - Remove administrative privileges: Once you have created a standard user account, you can remove administrative privileges from other user accounts. To do this, go to "Settings" > "Accounts" > "Family & other people", and select the user account you want to modify. Then, click "Change account type" and select "Standard user".
     - Use the UAC feature: The User Account Control (UAC) feature in Windows can help to prevent unauthorized changes by requiring administrative approval for certain actions. To enable UAC, go to "Settings" > "Update & Security" > "Windows Security" > "Virus & threat protection" > "Manage settings", and turn on "Tamper Protection". Then, go to "Settings" > "Accounts" > "Sign-in options" and turn on "User Account Control".
 
-6. Configure antivirus and anti-malware software.
+6. <b>Configure antivirus and anti-malware software.</b>
+    - Install antivirus and anti-malware software: There are many antivirus and anti-malware software options available for Windows, such as Windows Defender, McAfee, Norton, and Avast. Choose one and install it on your system.
+    - Update the antivirus and anti-malware software: Once you have installed the software, make sure to update it regularly to ensure it has the latest virus definitions and malware signatures. Most antivirus and anti-malware software programs provide an option to update automatically.
+    - Configure the antivirus and anti-malware software settings: Most antivirus and anti-malware software programs have default settings that provide basic protection. However, you can customize the settings to meet your specific needs. For example, you can configure the software to scan for threats on a regular basis, enable real-time protection, and set up alerts for potential threats.
+    - Perform regular scans: Even with real-time protection enabled, it's still a good idea to perform regular scans of your system to check for any hidden threats. Schedule regular scans at a time when your computer is not in use, such as overnight.
 
-7. Encrypt sensitive data.
+7. <b>Encrypt sensitive data.</b>
+    - Choose the encryption method: Windows provides two methods for encrypting data - BitLocker and Encrypting File System (EFS). BitLocker is a full-disk encryption tool that encrypts the entire hard drive, while EFS is a file-level encryption tool that encrypts individual files or folders.
+    - Enable BitLocker or EFS: To enable BitLocker, go to "Control Panel" > "System and Security" > "BitLocker Drive Encryption", and follow the prompts to encrypt your hard drive. To enable EFS, right-click on the file or folder you want to encrypt, select "Properties", and then click on the "Advanced" button. Check the box next to "Encrypt contents to secure data" and click "OK".
+    - Create a strong password: To encrypt the data, you'll need to create a strong password that will be required to access the data. Use a combination of uppercase and lowercase letters, numbers, and symbols, and avoid using easily guessable information like birthdates or names.
+    - Backup your recovery key: In case you forget your password, Windows will provide a recovery key that you can use to unlock the encrypted data. Make sure to backup this key to a safe location, such as a USB drive or a cloud storage service.
 
 8. Enable auditing and logging.
 
